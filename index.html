@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+    <title>Weather Omikuji</title>
+</head>
+<body class="bg-black flex flex-col justify-center items-center h-screen">
+    <h1 class="bg-gradient-to-r from-red-500 via-rose-500 to-yellow-400 bg-clip-text text-transparent text-7xl m-3 font-bold">Weather Omikuji</h1>
+    <select name="pref" id="pref" class="m-1 py-1 bg-blue-500 font-bold rounded-lg hover:bg-blue-400"></select>
+    <p id="ex" class="text-white">県名を選択して、「おみくじをおす」ボタンをクリック！！</p>
+    <div id="result-area" class="bg-white/95 shadow-lg shadow-white/50 rounded-lg block w-fit m-2 p-2 py-3 hidden">
+        <p id="wether-area" class="text-2xl m-1"></p>
+        <p id="wetherprob-area" class="text-2xl m-1"></p>
+        <div class="flex flex-col justify-center items-center">
+            <p id="omikuji-area" class="text-4xl m-1 font-bold"></p>
+            <p id="message-area" class="m-1"></p>
+        </div>
+    </div>
+    <div id="loading-area" class="w-12 h-12 m-9 border-4 border-blue-500 rounded-full border-t-transparent animate-spin hidden"></div>
+    <button id="omikuji-btn" class="text-3xl bg-gradient-to-r from-purple-500 to-pink-500 font-bold 
+    m-2 p-4 py-3 rounded-full active:scale-90 
+    disabled:bg-gradient-to-r disabled:from-gray-500 disabled:to-gray-500 transition duration-300
+    hover:bg-gradient-l hover:from-pink-600 
+    hover:to-purple-600 hover:scale-105">
+    おみくじをひく
+    </button>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
