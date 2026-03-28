@@ -1,6 +1,6 @@
 import { omikujiList, messageList, prefs } from "./lists.js";
 
-const apiKey = "2f17f89bff90ad41b3fe7324180cd58f";
+const apiKey = "ダミー";
 let flag = 0;
 let exFlag = 0;
 
